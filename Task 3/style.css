@@ -3,8 +3,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
-    'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
 /* Mobile first */
@@ -46,6 +46,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 1rem;
 }
 
 .output-cointainer h1 {
@@ -57,5 +58,31 @@
   margin-top: 25px;
   padding: 30px;
   border-radius: 5px;
-  background-color: #fff;
+  background-color: lightgray;
+}
+
+.output {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.card {
+  background-color: white;
+  height: 99%;
+  /* padding: 0.5rem; */
+  /* margin: 1rem; */
+}
+
+.card img {
+  width: 100%;
+  background-size: cover;
+  margin-top: 1rem;
+}
+
+/* Tablet */
+@media only screen and (min-width: 768px) {
+  .output {
+    /* grid-template-columns: 1fr 1fr; */
+  }
 }
