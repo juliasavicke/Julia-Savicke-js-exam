@@ -3,8 +3,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
-    'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
 /* Mobile first */
@@ -21,9 +21,54 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: lightgray;
 }
 
 .container h1 {
   margin-top: 50px;
   color: #333;
+}
+
+#output {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+  padding: 2rem;
+}
+.card {
+  background-color: white;
+  padding: 1rem;
+}
+.card h2 {
+  margin-bottom: 1em;
+}
+.card ul li {
+  list-style-type: none;
+  line-height: 1.4;
+}
+/* Mobile L */
+@media screen and (min-width: 425px) {
+  #output {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* Tablet */
+@media screen and (min-width: 768px) {
+  #output {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Desktop  */
+@media screen and (min-width: 1024px) {
+  #output {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+/* Desktop XL */
+@media screen and (min-width: 1440px) {
+  #output {
+    grid-template-columns: repeat(6, 1fr);
+  }
 }
