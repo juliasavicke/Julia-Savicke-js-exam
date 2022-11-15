@@ -6,7 +6,6 @@ multiplication(a, b) - priima du skaičius ir grąžina jų daugybos rezultatą;
 division(a, b) - priima du skaičius ir grąžina jų dalybos rezultatą;
 ------------------------------------------------------------------------------------ */
 class Calculator {
-  constructor(a, b) {}
   sum(a, b) {
     return a + b;
   }
