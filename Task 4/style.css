@@ -21,6 +21,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: lightgray;
 }
 
 .container h1 {
@@ -30,9 +31,8 @@
 
 #output {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 1rem;
-  background-color: lightgray;
   padding: 2rem;
 }
 .card {
@@ -45,4 +45,30 @@
 .card ul li {
   list-style-type: none;
   line-height: 1.4;
+}
+/* Mobile L */
+@media screen and (min-width: 425px) {
+  #output {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* Tablet */
+@media screen and (min-width: 768px) {
+  #output {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Desktop  */
+@media screen and (min-width: 1024px) {
+  #output {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+/* Desktop XL */
+@media screen and (min-width: 1440px) {
+  #output {
+    grid-template-columns: repeat(6, 1fr);
+  }
 }
