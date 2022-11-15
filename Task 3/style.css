@@ -63,15 +63,12 @@
 
 .output {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 1rem;
 }
 
 .card {
   background-color: white;
-  height: 99%;
-  /* padding: 0.5rem; */
-  /* margin: 1rem; */
 }
 
 .card img {
@@ -81,8 +78,15 @@
 }
 
 /* Tablet */
-@media only screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .output {
-    /* grid-template-columns: 1fr 1fr; */
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 1440px) {
+  .output {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
