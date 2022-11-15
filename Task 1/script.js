@@ -17,11 +17,13 @@ const els = {
 };
 
 function renderHtml(lb, g, oz) {
-  els.output.innerHTML = `
-    <h2>${lb} lb</h2>
-    <h2>${g} g</h2>
-    <h2>${oz} oz</h2>
-    `;
+  const lbEl = document.createElement("h2");
+  lbEl.textContent = `${lb} lb`;
+  const gEl = document.createElement("h2");
+  gEl.textContent = `${g} g`;
+  const ozEl = document.createElement("h2");
+  ozEl.textContent = `${oz} oz`;
+  els.output.append(lbEl, gEl, ozEl);
 }
 
 function convertValues(kgValue) {
